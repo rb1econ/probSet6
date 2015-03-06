@@ -30,4 +30,26 @@ var timeConvert = function(num){
   return Math.floor(hours)+':'+minutes;
 };
 
-console.log(timeConvert(64));
+console.log(timeConvert(124));
+
+var bracketMatcher = function(string){
+  var splitd = string.split('');
+  var left = [];
+  var right = [];
+  splitd.map(function(e){
+    if(e==='('){left.push(e)}
+    else if(e===')'){right.push(e)}
+  });
+  if(left.length === right.length){
+    return 'Brackets Match!!!';
+  }
+  else{return 'there are '+left.length+' left brackets and '+right.length+' right brackets';}
+};
+
+
+
+
+var aString = '(hey ) what is ((( gooing onnnn))))'
+
+
+console.log(bracketMatcher(aString));
