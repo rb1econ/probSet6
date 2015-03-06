@@ -21,4 +21,13 @@ var secondGreatLow = function(numArr){
 };
 
 
-console.log(secondGreatLow([3, 2]));
+// console.log(secondGreatLow([3, 2]));
+
+var timeConvert = function(num){
+  var hours = num/60;
+  var minDec = hours%1;
+  var minutes = Math.ceil((minDec*60));
+  return Math.floor(hours)+':'+minutes;
+};
+
+console.log(timeConvert(64));
